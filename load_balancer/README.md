@@ -1,18 +1,15 @@
 # Load Balancer Project
 
-This project demonstrates setting up NGINX web servers with a custom HTTP response header (`X-Served-By`) and an HAProxy load balancer on Ubuntu 20.04 LTS.
+This project sets up two NGINX web servers with a custom `X-Served-By` header and an HAProxy load balancer.
 
-## Project Overview
+## Web Servers
+- Ubuntu 20.04, NGINX installed
+- Custom header: `add_header X-Served-By $(hostname);`
+- Web root: `/var/www/html/index.html` with server hostname
 
-- Two web servers (`6828-web-01` and `6828-web-02`) running NGINX.
-- Each web server responds with a unique `X-Served-By` header for identification.
-- A load balancer (`6828-lb-01`) using HAProxy distributes traffic to both web servers.
+## HAProxy
+- Balances traffic using round-robin
+- Config: `backend http_back` with `server 6828-web-01 54.84.22.241:80 check` and `server 6828-web-02 44.210.137.29:80 check`
 
-## Setup Instructions
-
-### Web Servers
-
-1. Install NGINX:
-   ```bash
-   sudo apt update
-   sudo apt install -y nginx
+## Test
+- `curl -Is http://35.173.230.3 | grep X-Served-By` shows which server responded
