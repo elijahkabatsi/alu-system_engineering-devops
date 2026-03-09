@@ -1,0 +1,10 @@
+# Ignore VSCode server files
+.vscode-server/
+
+# Ignore SSH keys
+.ssh/
+
+# Ignore dotnet caches
+.dotnet/
+.cache/
+.git-credentials
