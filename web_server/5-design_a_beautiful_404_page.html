@@ -2,39 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>404 - Page Not Found</title>
+    <title>404 Not Found</title>
     <style>
         body {
-	    background-color: #f2f2f2;
-	    color: #333;
-	    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	    display: flex;
-	    flex-direction: column;
-	    justify-content: center;
-	    align-items: center;
-	    height: 100vh;
-	    margin: 0;
-	}
-	h1 {
-	    font-size: 6em;
-	    margin: 0;
-	}
+            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 5%;
+        }
+        h1 {
+            font-size: 6em;
+            margin: 0.2em 0;
+            color: #e74c3c;
+        }
         p {
-	    font-size: 1.5em;
-	}
+            font-size: 1.5em;
+            margin: 0.5em 0 2em 0;
+        }
         a {
-	    color: #007acc;
-	    text-decoration: none;
-	    margin-top: 20px;
-	}
-	a:hover {
-	    text-decoration: underline;
-	}
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #2c80b4;
+        }
+        .illustration {
+            margin: 2em auto;
+            width: 200px;
+        }
     </style>
 </head>
 <body>
     <h1>404</h1>
     <p>Ceci n'est pas une page</p>
-    <a href="/">Go back to Home</a>
+    <p>Oops! The page you are looking for doesn't exist.</p>
+    <p><a href="/">Go back home</a></p>
+    <img class="illustration" src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Lost illustration">
 </body>
 </html>
