@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # Fix Nginx to run and listen on port 80
+apt-get update -y
+apt-get install -y nginx
 service nginx start
-nginx -s reload
